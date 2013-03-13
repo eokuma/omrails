@@ -1,7 +1,14 @@
 /* Change Font family */
 /*$baseFontFamily: Oxygen;
 
+Less: variables have $;
+Sass: variables have @;
+
 @import url(http://fonts.googleapis.com/css?family=oxygen);*/
+
+$btnPrimaryBackground: green;
+$navbarBackgroundHighLight: gray;
+$navbarBackground: white;
 
 
 @import 'bootstrap';
@@ -12,10 +19,17 @@ body {
 
 @import 'bootstrap-responsive';
 
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
+
 .footer {
 
-	margin-top: 50px;
+	text-align: left;
+	margin-top: 300px;
 	color: $grayLight;
+	
 	a {
 		color: $gray;
 	}
