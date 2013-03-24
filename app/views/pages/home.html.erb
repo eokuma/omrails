@@ -1,17 +1,21 @@
-<div class="hero-unit">
+<% if user_signed_in? %>
+	<h1>You're Logged In! </h1>
 
-	<h1>Welcome to AKiRA Music Channel</h1>
-	<p>
-		Pages:
-		<%= link_to "Soundcloud", "http://soundcloud.com/akiramusicchannel" %>
-		
+<% else %>	
+	<div class="hero-unit">
 
-	</p>
-	<p>
-		<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
+		<h1>Welcome to AKiRA Music Channel</h1>
+		<p>
+			Pages:
+			<%= link_to "Soundcloud", "http://soundcloud.com/akiramusicchannel" %>
+			
 
-	</p>
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 
-</div>
+		</p>
 
+	</div>
+<% end %>
 
